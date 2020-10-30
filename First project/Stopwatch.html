@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Stopwatch</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src='stopwatch.js'></script>
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Calculator.html">Calculator</a></li>
+        <li><a href="Stopwatch.html">Stopwatch</a></li>
+        <li><a href="Tasks.html">Tasks</a></li>
+        <li><a href="Stocks.html">Stocks</a></li>
+        <li style="float:right;"><a href="https://www.google.com/">Google</a></li>
+      </ul>
+<h1>Stopwatch</h1>  
+<br>
+<p>The fastest stopwatch in the universe</p>
+<br>
+
+<h1>
+      <span id="hour">00</span> :
+      <span id="min">00</span> :
+      <span id="sec">00</span> :
+      <span id="milisec">00</span>
+</h1>
+    
+    <button onclick="startStop()" class="buttonstart" id="start">Start</button>
+    <button onclick="reset()" class="buttonrestart">Reset</button>
+
+</body>
+</html>
