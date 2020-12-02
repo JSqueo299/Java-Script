@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Calculator</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src='calculator.js'></script>
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Calculator.html">Calculator</a></li>
+        <li><a href="Stopwatch.html">Stopwatch</a></li>
+        <li><a href="Tasks.html">Tasks</a></li>
+        <li><a href="Stocks.html">Stocks</a></li>
+        <li style="float:right;"><a href="https://www.google.com/">Google</a></li>
+      </ul>
+<h1>Calculator</h1>  
+<br>
+
+<input type="text" id="1stnumber" name="1stnumber" placeholder="Input 1">
+
+<select name="operator" id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="/">/</option>
+    <option value="*">*</option>
+</select>
+
+<input type="text" id="2ndnumber" name="2ndnumber" placeholder="Input 2"> 
+<span>=</span>
+<span><b id="result"></b></span>
+<br>
+<button onclick="calculate()" class="buttonrestart">Click to Solve</button>
+
+</body>
+</html>
