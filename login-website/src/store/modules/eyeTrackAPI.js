@@ -9,7 +9,7 @@ const mutations = {
 };
 
 const actions = {
-    async fetchHistoryData({ commit }, ticker) {
+    async fetchGazeCloudAPI({ commit }, ticker) {
     try {
         const response = await fetch(apiUrl(ticker));
         const responseData = await response.json();
