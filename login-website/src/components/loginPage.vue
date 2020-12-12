@@ -27,7 +27,13 @@ export default {
     ...mapActions(['login']),
     handleLogin() {
       this.login('username', 'password');
-    }
+    },
+    data() {
+        return {
+          username: '',
+          password: '',
+        }
+      }
   },
   
 };
