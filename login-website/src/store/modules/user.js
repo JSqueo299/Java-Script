@@ -2,7 +2,10 @@ import apiService from "../../services/apiService";
 
 const state = {
     token: '123',
-    userData: {}
+    userData: {
+      username: '',
+      password: '',
+    }
 };
 
 const mutations = {
@@ -27,6 +30,10 @@ const actions = {
     const token = data.token;
     apiService.setToken(token);
     commit('ADD_USER', user);
+    return {
+      username: '',
+      password: '',
+    }
   },
   logout({ commit }) {
     commit('REMOVE_USER');
