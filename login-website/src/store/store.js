@@ -3,7 +3,7 @@ import Vuex from 'vuex';
 //import VuexPersist from 'vuex-persist';
 
 //import eyeTrackAPI from './modules/eyeTrackAPI';
-import user from './modules/user';
+//import user from './modules/user';
 
 Vue.use(Vuex);
 
@@ -19,7 +19,7 @@ const vuexLocalStorage = new VuexPersist({
 
 export default new Vuex.Store({
   modules: {
-    user
+    //user
   }
   // plugins: [vuexLocalStorage.plugin] remove for now
 });

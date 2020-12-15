@@ -1,11 +1,6 @@
-import apiService from "../../services/apiService";
-
 const state = {
-    token: '123',
-    userData: {
-      username: '',
-      password: '',
-    }
+    token: '',
+    userData: {}
 };
 
 const mutations = {
@@ -19,7 +14,7 @@ const mutations = {
 
 const actions = {
   async login({ commit }, user) {
-    const data = await apiService.fetch('https://vue-dashboard-123.herokuapp.com/api/login', 
+    const data = await fetch('https://vue-dashboard-123.herokuapp.com/api/login', 
       {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
@@ -28,12 +23,8 @@ const actions = {
       })
       });
     const token = data.token;
-    apiService.setToken(token);
     commit('ADD_USER', user);
-    return {
-      username: '',
-      password: '',
-    }
+    return token;
   },
   logout({ commit }) {
     commit('REMOVE_USER');
