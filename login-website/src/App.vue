@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <welcomePage msg="Stock Trading with the Big Men"/>
     <loginPage />
   </div>
   
 </template>
 
 <script>
-import welcomePage from './components/welcomePage.vue'
 import loginPage from './components/loginPage.vue'
+//import  from './components/dashboard.vue'
 import Vue from 'vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
@@ -24,8 +22,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 export default {
   name: 'App',
   components: {
-    welcomePage,
-    loginPage
+    loginPage,
+    //authenticatedPage
   }
 }
 </script>
