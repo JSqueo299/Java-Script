@@ -31,7 +31,7 @@ import welcomePage from './welcomePage.vue'
       }
     },
     components: {
-    welcomePage,
+      welcomePage,
     },
     methods: {
       async login() {
@@ -45,13 +45,13 @@ import welcomePage from './welcomePage.vue'
                 username: this.input.username, password: this.input.password
               })
             });
-            let responseData = await data.json();
             if (data.status != 200) {
               this.errMessage = "Wrong username or password!";
               console.log("wrong user or password");
             } else {
-              //this.$emit("authenticated", true);
-              //this.$router.replace({ name: "secure" });
+              let responseData = await data.json();
+              this.$emit("authenticated", true);
+              this.$router.replace({ name: "secure" });
               //router.push({ path: 'dashboard' })
               const token = responseData.token;
               return token;

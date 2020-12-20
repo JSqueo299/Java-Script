@@ -15,6 +15,9 @@
 <script>
 import welcomePage from './welcomePage.vue'
     export default {
-        name: 'authenticatedPage',
+      name: 'dashboard',
+      components: {
+        welcomePage,
+      },
     }
 </script>
