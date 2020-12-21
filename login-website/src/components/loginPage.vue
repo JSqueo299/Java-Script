@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import welcomePage from './welcomePage.vue'
 import router from '../router'
   export default {
@@ -40,6 +41,7 @@ import router from '../router'
       welcomePage,
     },
     methods: {
+      ...mapActions(['setToken', 'addUser']),
       async login() {
         if(this.input.username != "" && this.input.password != "") {
           try {
@@ -60,6 +62,8 @@ import router from '../router'
               this.$router.replace({ name: "secure" });
               //router.push({ path: 'dashboard' })
               const token = responseData.token;
+              this.setToken(token);
+              this.addUser(responseData.user);
               return token;
             }
           }

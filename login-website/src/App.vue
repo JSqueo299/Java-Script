@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-        <router-link v-if="authenticated" to="/secure" v-on:click.native="logout()" replace>Logout</router-link>
+        <router-link v-if="authenticated" to="/secure" v-on:click.native="logout()" replace>Logout {{ userData.username }}</router-link>
     </div>
     <router-view @authenticated="setAuthenticated" />
   </div>
@@ -13,6 +13,7 @@
 //import dashboard from './components/dashboard.vue'
 import router from './router'
 import Vue from 'vue'
+import { mapGetters } from 'vuex';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
 // Install BootstrapVue
@@ -38,6 +39,9 @@ mounted() {
   if(!this.authenticated && this.$route.path != "/login") {
     this.$router.replace({ name: "login" });
   }
+},
+computed: {
+  ...mapGetters(['userData'])
 },
 methods: {
   setAuthenticated(status) {

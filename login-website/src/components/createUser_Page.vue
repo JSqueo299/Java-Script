@@ -58,9 +58,9 @@ import router from '../router'
                         username: this.input.username, password: this.input.password
                     })
                     });
-                    if (data.status != 200) {
+                    if (data.status != 201) {
                     this.errMessage = "User credentials could not be created. Please try another username and/or password.";
-                    console.log("cannot create user. Status != 200");
+                    console.log("cannot create user. Status != 201  ");
                     } else {
                     this.statusMessage = "New user has been created! Redirecting in 3 seconds"
                     setTimeout(3000);

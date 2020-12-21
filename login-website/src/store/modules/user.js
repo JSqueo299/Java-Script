@@ -1,7 +1,7 @@
 const state = {
     token: '',
     userData: {
-      authenticate = false;
+      authenticate: false
     }
 };
 
@@ -11,8 +11,21 @@ const mutations = {
   },
   REMOVE_USER(state) {
     state.userData = {};
+  },
+  SET_TOKEN(state, token) {
+    state.token = token;
+    console.log("SET_TOKEN")
   }
 };
+
+const actions = {
+  setToken({ commit }, token) {
+    commit("SET_TOKEN", token);
+  },
+  addUser({ commit }, userdata) {
+    commit("ADD_USER", userdata);
+  }
+}
 
 const getters = {
   userData(state) {
@@ -26,5 +39,6 @@ const getters = {
 export default {
   state,
   mutations,
+  actions,
   getters
 };
