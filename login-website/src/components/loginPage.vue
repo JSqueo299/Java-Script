@@ -5,11 +5,11 @@
       <p>{{ errMessage }}</p>
     </div>
     <br>
-    <div class="input-group" style="width: 20%;display:inline-block">
+    <div class="input-group col-sm" style="display:inline-block">
       <input type="username" class="form-control" v-model="input.username" placeholder="Username" aria-describedby="basic-addon1">
     </div>
     <br>
-    <div class="input-group" style="width: 20%;display:inline-block">
+    <div class="input-group col-sm" style="display:inline-block">
       <input type="password" class="form-control" v-model="input.password" placeholder="Password" aria-describedby="basic-addon1">
     </div>
       <br>

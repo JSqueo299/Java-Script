@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <img alt="Vue logo" src="https://pbs.twimg.com/media/DIYJPGiUMAIKnTu?format=jpg&name=small">
+    <img alt="Vue logo" class="img-fluid img-thumbnail" src="https://pbs.twimg.com/media/DIYJPGiUMAIKnTu?format=jpg&name=small">
     <h1>{{ msg }}</h1>
     <p>
       Welcome to our stock tracking website.
