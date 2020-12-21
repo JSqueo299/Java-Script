@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import loginPage from "../components/loginPage.vue"
 import dashboard from "../components/dashboard.vue"
+import createUser_Page from "../components/createUser_Page.vue"
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
         path: "/secure",
         name: "secure",
         component: dashboard
+    },
+    {
+        path: "/createUser_Page",
+        name: "createUser_Page",
+        component: createUser_Page
     }
 ];
 

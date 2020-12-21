@@ -13,12 +13,18 @@
       <input type="password" class="form-control" v-model="input.password" placeholder="Password" aria-describedby="basic-addon1">
     </div>
       <br>
-      <button type="button" class="btn btn-outline-secondary" @click="login()">Login</button>
+    <div>  
+      <span>
+        <button type="button" class="btn btn-outline-secondary" @click="login()">Login</button> &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-primary" @click="createUser()">Create User</button>
+      </span>
+    </div>    
   </div>
 </template>
 
 <script>
 import welcomePage from './welcomePage.vue'
+import router from '../router'
   export default {
     name: 'loginPage',
     data() {
@@ -65,6 +71,9 @@ import welcomePage from './welcomePage.vue'
           this.errMessage = "A username and password must be entered!";
           console.log("A username and password must be entered");
         }
+      },
+      createUser() {
+        router.push({ path: 'createUser_Page' })
       } 
     }
   }
